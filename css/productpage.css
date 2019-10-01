@@ -1,0 +1,541 @@
+@charset "utf-8";
+/* BannerProductpage */
+
+
+#bannerproductpage{
+	height: 350px;
+	background-image: url("../stock/fe149ee06150ad1e9683d501eb8c05f4.jpg");
+	background-size: cover;
+	background-repeat: none;
+	background-position: center;
+	padding: 0px;
+}
+
+#bannertitle{
+	background-color: hsla(0,0%,0%,0.5);
+	width:auto;
+}
+
+#bannertitle:hover{
+	transform: scale(1.02,1.02)
+}
+#bannertitle a{
+	text-decoration: none;
+	color: #efb85d;
+	display: block;
+	font-family: mytitlefont;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+#bannercontent{
+	margin-top: 10px;
+	padding-left: 0px;
+}
+
+#bannercontent a{
+	text-decoration: none;
+	color:hsla(0,0%,100%,1.00);
+	font-size: 27px;
+	
+}
+
+/* Content */
+
+
+#filter{
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	position: sticky;
+	z-index: 5;
+	top: 80px;
+}
+
+
+#filterxs{
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+#filterxs span{
+	font-size: 16px;
+	color:rgba(129,45,79,1.00);
+	font-weight: 550;
+}
+
+#filterxs a{
+	display: block;
+	text-decoration: none;
+}
+#filterxs a span:hover{
+	color:#4F0825;
+}
+
+.muangaysmxs{
+	width: 100%;
+	margin-top:10px;	
+	margin-bottom: 20px;
+}
+
+.muangaysmxs a{
+	display: block;
+	font-size: 22px;
+	color:rgba(129,45,79,1.00);
+	background-color: #efb85d;
+	border: solid 1pt rgba(129,45,79,1.00);
+	border-radius: 7px;
+	text-align: center;
+	text-decoration: none;
+}
+.muangaysmxs a:hover{
+	background-color: rgba(129,45,79,1.00);
+	color: white;
+}
+
+.themicon{
+	position: absolute;
+	z-index: 5;
+	text-align: right;
+	display: block;
+}
+
+
+/* Only Mobile */
+
+@media (max-width: 767px){
+	.themicon{
+	margin-left: 135px;
+}
+.themicon a{
+		text-decoration: none;
+		display: block;
+		color: rgba(129,45,79,1.00);
+		padding-top: 5px;
+	}
+.productbox:hover{
+		cursor: pointer;
+	}
+
+	
+	.blackcover{
+	position: absolute;
+	z-index: 1000;
+	opacity: 0;
+	transition: all ease .5s;
+	margin-left: 13px;
+	margin-top: 20px;
+	width: 160px;/**/
+	height: 223px;/**/
+}
+.threebtn{
+	position: absolute;
+	z-index: 1001;
+	margin-top: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
+	opacity: 0;
+	transition: all ease .5s;
+}
+
+.threebtn a{
+	text-decoration: none;
+	display:block;
+}
+
+.threebtn a:hover{
+	background-color: rgba(129,45,79,1.00);
+	color: white;
+}
+
+.muangaybtn,.themvaogiobtn,.chitietbtn{
+	background-color: rgba(239,184,93,1.00);
+	border: solid 1pt rgba(129,45,79,1.00);
+	display: block;
+	height: 40px;
+	text-decoration: none;
+	font-size: 15px;
+	text-align: center;
+	color: rgba(129,45,79,1.00);
+	font-family: mytitlefont;
+	border-radius: 15px;
+	margin-top: 15px;
+	padding-top: 6px;
+}
+	#bannertitle{
+		margin-top: 100px;
+		width:100%;
+	}
+	#bannercontent{
+		text-align: center;
+	}
+	#bannercontent a{
+	font-size: 17px;
+	}
+	#bannertitle a{
+		font-size: 25px;
+	}
+		.nametag{
+	text-align: left;
+	font-family: mytitlefont;
+	color: rgba(129,45,79,1.00);
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-left: 50px;
+}
+	
+}
+@media (max-width:423px){
+	.themicon{
+	margin-left: 65%;
+}
+	.productbox:hover{
+		cursor: pointer;
+	}
+
+	#coppyright{
+		margin-top: 110px;
+		font-size: 12px;
+	}
+
+		.blackcover{
+			display:none;
+}
+	.muangaybtn,.themvaogiobtn,.chitietbtn{
+	background-color: rgba(239,184,93,1.00);
+	border: solid 1pt rgba(129,45,79,1.00);
+	display: block;
+	height: 30px;
+	text-decoration: none;
+	text-align: center;
+	color: rgba(129,45,79,1.00);
+	font-family: mytitlefont;
+	font-size: 12px;
+	border-radius: 15px;
+	margin-top: 0px;
+	padding-top: 6px;
+	margin-bottom: 5px;
+}
+.threebtn{
+	position: absolute;
+	z-index: 1001;
+	margin-top: 30px;
+	margin-right: 10px;
+	margin-left: 10px;
+	opacity: 0;
+	transition: all ease .5s;
+}
+
+.threebtn a{
+	text-decoration: none;
+	display:block;
+}
+
+.threebtn a:hover{
+	background-color: rgba(129,45,79,1.00);
+	color: white;
+}
+
+}
+/* Only Tablet */
+
+@media (min-width: 768px) and (max-width: 991px){
+		.themicon{
+	margin-left: 170px;
+}
+	.themicon a{
+		text-decoration: none;
+		display: block;
+		color: rgba(129,45,79,1.00);
+		padding-top: 5px;
+	}
+		.productbox:hover{
+			
+		cursor: pointer;
+	}
+
+	
+	.blackcover{
+	position: absolute;
+	z-index: 1000;
+	opacity: 0;
+	transition: all ease .5s;
+	margin-left: 15px;
+	margin-top: 30px;
+	width: 195px;/**/
+	height: 262px;/**/
+}
+.threebtn{
+	position: absolute;
+	z-index: 1001;
+	margin-top: 50px;
+	margin-right: 28px;
+	margin-left: 28px;
+	opacity: 0;
+	transition: all ease .5s;
+}
+
+.threebtn a{
+	text-decoration: none;
+	display:block;
+}
+
+.threebtn a:hover{
+	background-color: rgba(129,45,79,1.00);
+	color: white;
+}
+
+.muangaybtn,.themvaogiobtn,.chitietbtn{
+	background-color: rgba(239,184,93,1.00);
+	border: solid 1pt rgba(129,45,79,1.00);
+	display: block;
+	height: 40px;
+	text-decoration: none;
+	font-size: 20px;
+	text-align: center;
+	color: rgba(129,45,79,1.00);
+	font-family: mytitlefont;
+	border-radius: 15px;
+	margin-top: 15px;
+	padding-top: 4px;
+}
+	
+	#bannertitle{
+		margin-top: 100px;
+		margin-left: 20px;
+	}
+	#bannercontent{
+		margin-left: 20px;
+	}
+	#bannercontent a{
+	font-size: 20px;
+	}
+	#bannertitle a{
+		font-size: 30px;
+	}
+	#filter ul{
+	list-style-type: none;
+}
+#filter ul a{
+	text-decoration: none;
+	color:rgba(129,45,79,1.00);
+	font-size: 15px;
+	font-weight: 550;
+}
+#filter ul a:hover{
+	color: #4F0825;
+}
+#filter ul a li{
+	padding-left: 0px;
+	margin-bottom: 10px;
+}
+#filter ul a li span{
+	padding-left: 10px;
+}
+		.nametag{
+	text-align: left;
+	font-family: mytitlefont;
+	color: rgba(129,45,79,1.00);
+	font-size: 35px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-left: 50px;
+}
+}
+
+
+/* Only Medium */
+
+@media (min-width: 992px) and (max-width: 1199px){
+	#bannertitle{
+		margin-top: 100px;
+	}
+	#bannercontent a{
+	font-size: 20px;
+	}
+	#bannertitle a{
+		font-size: 30px;
+	}
+	/*threebtn*/
+	.productbox:hover .threebtn{
+	opacity: 1;
+	transition: all ease .5s;
+}
+
+.productbox:hover .blackcover{
+	opacity: 1;
+	transition: all ease .5s;
+}
+
+.blackcover{
+	position: absolute;
+	z-index: 1000;
+	opacity: 0;
+	transition: all ease .5s;
+	margin-left: 14px;
+	margin-top: 26px;
+	width: 187px;/**/
+	height: 255px;/**/
+}
+.threebtn{
+	position: absolute;
+	z-index: 1001;
+	margin-top: 50px;
+	margin-right: 20px;
+	margin-left: 20px;
+	opacity: 0;
+	transition: all ease .5s;
+}
+
+.threebtn a{
+	text-decoration: none;
+	display:block;
+}
+
+.threebtn a:hover{
+	background-color: rgba(129,45,79,1.00);
+	color: white;
+}
+
+.muangaybtn,.themvaogiobtn,.chitietbtn{
+	background-color: rgba(239,184,93,1.00);
+	border: solid 1pt rgba(129,45,79,1.00);
+	display: block;
+	height: 40px;
+	text-decoration: none;
+	font-size: 20px;
+	text-align: center;
+	color: rgba(129,45,79,1.00);
+	font-family: mytitlefont;
+	border-radius: 15px;
+	margin-top: 15px;
+	padding-top: 2px;
+}
+	#filter ul{
+	list-style-type: none;
+}
+#filter ul a{
+	text-decoration: none;
+	color:rgba(129,45,79,1.00);
+	font-size: 15px;
+	font-weight: 550;
+}
+#filter ul a:hover{
+	color: #4F0825;
+}
+#filter ul a li{
+	padding-left: 0px;
+	margin-bottom: 10px;
+}
+#filter ul a li span{
+	padding-left: 10px;
+}
+	.nametag{
+	text-align: left;
+	font-family: mytitlefont;
+	color: rgba(129,45,79,1.00);
+	font-size: 35px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-left: 50px;
+}
+	
+}
+
+/* Only Lagre*/
+
+@media (min-width: 1200px){
+	#bannertitle{
+		margin-top: 100px;
+	}
+	#bannercontent a{
+	font-size: 20px;
+	}
+	#bannertitle a{
+		font-size: 30px;
+	}
+	/*threebtn*/
+	.productbox:hover .threebtn{
+	opacity: 1;
+	transition: all ease .5s;
+}
+
+.productbox:hover .blackcover{
+	opacity: 1;
+	transition: all ease .5s;
+}
+	
+.blackcover{
+	position: absolute;
+	z-index: 1000;
+	opacity: 0;
+	transition: all ease .5s;
+	margin-left: 15px;
+	margin-top: 30px;
+	width: 232px;/**/
+	height:317px;/**/
+}
+.threebtn{
+	position: absolute;
+	z-index: 1001;
+	margin-top: 50px;
+	margin-right: 40px;/**/
+	margin-left: 40px;/**/
+	opacity: 0;
+	transition: all ease .5s;
+}
+
+.threebtn a{
+	text-decoration: none;
+	display:block;
+}
+
+.threebtn a:hover{
+	background-color: rgba(129,45,79,1.00);
+	color: white;
+}
+
+.muangaybtn,.themvaogiobtn,.chitietbtn{
+	background-color: rgba(239,184,93,1.00);
+	border: solid 1pt rgba(129,45,79,1.00);
+	display: block;
+	height: 40px;
+	text-decoration: none;
+	font-size: 18px;
+	text-align: center;
+	color: rgba(129,45,79,1.00);
+	font-family: mytitlefont;
+	border-radius: 15px;
+	margin-top: 15px;
+	padding-top: 5px;
+}
+	#filter ul{
+	list-style-type: none;
+}
+#filter ul a{
+	text-decoration: none;
+	color:rgba(129,45,79,1.00);
+	font-size: 20px;
+	font-weight: 550;
+}
+#filter ul a:hover{
+	color: #4F0825;
+}
+#filter ul a li{
+	padding-left: 14px;
+	margin-bottom: 10px;
+}
+#filter ul a li span{
+	padding-left: 20px;
+}
+	.nametag{
+	text-align: left;
+	font-family: mytitlefont;
+	color: rgba(129,45,79,1.00);
+	font-size: 40px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	padding-left: 50px;
+}
+}

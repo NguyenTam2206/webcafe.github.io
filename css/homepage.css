@@ -1,0 +1,415 @@
+@charset "utf-8";
+
+/* Banner@ */
+
+
+/* Banner */
+#bannerhomepage{
+	height: 750px;
+	padding: 0px;
+	background-image: url(../stock/espresso-ground-coffee-beans-1296x728.jpg);
+	background-size: cover;
+	background-repeat: none;
+	background-position: center;
+	background-attachment: scroll;
+}
+
+.bannertitle:hover{
+	transform: scale(1.02,1.02)
+}
+.bannertitle a{
+	text-decoration: none;
+	color: #efb85d;
+	display: block;
+	font-family: mytitlefont;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.bannercontent{
+	margin-top: 10px;
+	padding-left: 0px;
+}
+
+.bannercontent a{
+	text-decoration: none;
+	color:hsla(0,0%,100%,1.00);
+	font-size: 27px;
+	
+}
+
+.bannercontent a span{
+	font-size: 18px;
+	float: left;
+	display: block;
+}
+
+
+#coffeegood:hover{
+	transform: scale(1.1,1.1);
+}
+
+.latte{
+	color: white;
+}
+.latte:hover{
+	text-decoration: underline;
+	text-decoration-color: rgba(239,184,93,1.00);
+}
+
+/*Tin tuc*/
+
+.tintucimg,.contenttintuc{
+	position: absolute;
+	z-index: 14;
+}
+
+.tintucimg:hover{
+	transform: scale(1.02,1.02);
+}
+
+/*Hỏi cách hover tranform cùng lúc 2 cái*/
+/* Only Mobile */
+
+@media (max-width: 767px){
+	.carousel-caption {
+  		position: absolute;
+  		right: 0%;
+  		bottom: 0%;
+  		left: 0%;
+		top: 0%;
+  		z-index: 10;
+  		padding-top: none;
+  		padding-bottom: none;
+		padding-left: none;
+  		color: #fff;
+  		text-align: center;
+  		text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	}
+	.item img{
+ 	width: 100%;
+	height: auto;
+	}
+	/*.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+}*/
+	.bannertitle{
+	background-color: hsla(0,0%,0%,0.5);
+	width: 300px;
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: 40%;
+	}
+	.bannercontent a{
+	font-size: 18px;
+	
+	}
+	
+	.bannercontent{
+	background-color: rgba(129,45,79,0.50);	
+	}
+	
+	.bannercontent a span{
+	font-size: 14px;
+	float:none;
+	text-align: center;
+	}
+	.bannertitle a{
+		font-size: 30px;
+		text-align: center;   /*cam hung*/
+	}
+	
+	.boxsocola{
+		background-color:rgba(129,45,79,0.50);
+		margin-top: 10px;
+	}
+	.tintucimg{
+	margin-top: 18px;
+	margin-left: 20px;
+	}
+
+	.contenttintuc p{
+
+	}
+
+	.contenttintuc p a{
+	display: block;
+	text-decoration: none;
+	font-family: mytitlefont;
+	color: #812d4f;
+	font-size: 16px;
+	margin-top: 13px;
+	}
+
+	.contenttintuc h5{
+	line-height: 20px;
+	padding-right: 12px;
+	font-size: 13px;
+	}
+
+	.contenttintuc p a:hover{
+	transform: scale(1.02,1.02);
+	}
+
+}
+
+/* Only Tablet */
+
+@media (min-width: 768px) and (max-width: 991px){
+	.carousel-caption {
+  		position: absolute;
+  		right: 0%;
+  		bottom: 0%;
+  		left: 0%;
+		top: 0%;
+  		z-index: 10;
+  		padding-top: none;
+  		padding-bottom: none;
+		padding-left: none;
+  		color: #fff;
+  		text-align: center;
+  		text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	}	
+	.bannertitle{
+	background-color: hsla(0,0%,0%,0.5);
+	width: 300px;
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: 10%;
+	}
+	.bannercontent a{
+	font-size: 18px;
+	
+	}
+	
+	.bannercontent{
+	background-color: rgba(129,45,79,0.50);	
+	}
+	
+	.bannercontent a span{
+	font-size: 14px;
+	float:none;
+	text-align: center;
+	}
+	.bannertitle a{
+		font-size: 30px;
+		text-align: center;
+	}
+	
+	.boxsocola{
+		background-color:rgba(129,45,79,0.50);
+	}
+	
+	.tintucimg{
+	margin-top: 22px;
+	margin-left: 90px;
+	}
+
+	.contenttintuc p{
+		padding-left: 18px;
+		padding-right: 18px
+	}
+
+	.contenttintuc p a{
+	display: block;
+	text-decoration: none;
+	font-family: mytitlefont;
+	color: #812d4f;
+	font-size: 24px;
+	margin-top: 30px;
+	}
+
+	.contenttintuc h5{
+	line-height: 20px;
+	padding-left: 18px;
+	padding-right: 18px;
+	font-size: 20px;
+	}
+
+	.contenttintuc p a:hover{
+	transform: scale(1.02,1.02);
+	}
+
+}
+/* Only Medium */
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.carousel-caption {
+  		position: absolute;
+  		right: 0%;
+  		bottom: none;
+  		left: 15%;
+		top: 20%;
+  		z-index: 10;
+  		padding-top: none;
+  		padding-bottom: none;
+		padding-left: none;
+  		color: #fff;
+  		text-align: left;
+  		text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	}	
+	.item img{
+ 	width: 100%;
+	height: auto;
+	}
+
+	.bannercontent a{
+	font-size: 20px;
+	
+	}
+	.bannercontent a span{
+	font-size: 12px;
+	}
+	.bannertitle a{
+		font-size: 40px;
+		text-align: left;
+	}
+	.bannertitle{
+	background-color: hsla(0,0%,0%,0.5);
+	width: 405px;
+	}
+	.tintucimg{
+	margin-top: 4%;
+	margin-left: 5%;
+	}
+
+	.contenttintuc p{
+	padding-right: 4%;
+	padding-left: 4%;
+	}
+
+	.contenttintuc p a{
+	display: block;
+	text-decoration: none;
+	font-family: mytitlefont;
+	color: #812d4f;
+	font-size: 20px;
+	margin-top: 25px;
+	}
+
+	.contenttintuc h5{
+	padding-right: 4%;
+	padding-left: 4%;
+	line-height: 20px;
+	}
+
+	.contenttintuc p a:hover{
+	transform: scale(1.02,1.02);
+	}
+
+	
+}
+
+/* Only Lagre*/
+
+@media (min-width: 1200px){
+	.carousel-caption {
+  		position: absolute;
+  		right: 0%;
+  		bottom: none;
+  		left: 20%;
+		top: 20%;
+  		z-index: 10;
+  		padding-top: none;
+  		padding-bottom: none;
+		padding-left: none;
+  		color: #fff;
+  		text-align: left;
+  		text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	}	
+	.item img{
+ 	width: 100%;
+	height: auto;
+	}
+
+	/*Cắt hình lại đúng chuẩn và để height: auto*/
+	.bannercontent a{
+	font-size: 25px;
+	
+	}
+	.bannercontent a span{
+	font-size: 14px;
+	}
+	.bannertitle a{
+		font-size: 50px;
+	}
+	.bannertitle{
+	background-color: hsla(0,0%,0%,0.5);
+	width: 495px;
+	}
+	.tintucimg{
+	margin-top: 20px;
+	margin-left: 25px;
+	}
+
+	.contenttintuc{
+	margin-top: 30px;
+	}
+
+	.contenttintuc p{
+	padding-right: 20px;
+	padding-left: 20px;
+	}
+
+	.contenttintuc p a{
+	display: block;
+	text-decoration: none;
+	font-family: mytitlefont;
+	color: #812d4f;
+	font-size: 25px;
+	}
+
+	.contenttintuc h5{
+	font-size: 18px;
+	padding-right: 20px;
+	padding-left: 20px;
+	line-height: 20px;
+	}
+
+	.contenttintuc p a:hover{
+	transform: scale(1.02,1.02);
+	}
+}
+
+@media (max-width: 375px){
+	.contenttintuc h5{
+		font-size: 3vw;
+		line-height: 4vw;
+	}
+	.contenttintuc p a{
+		font-size: 4vw;
+	}
+	.xemtatca{
+	margin-top: 15px;
+	font-size: 18px;
+	
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

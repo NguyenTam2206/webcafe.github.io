@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HomePage</title>
+	  <!--CSS-->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/homepage.css">
+	<link href="css/fontawesome/css/all.css" rel="stylesheet">
+	<!--JavaScript--> 
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#blackscreen').hide();
+			$('#smxsnavi ul').hide();
+			$('#icon3line').click(function(){
+				$('#smxsnavi ul').slideToggle();
+				$('#blackscreen').fadeToggle();
+			})
+			$('#blackscreen').click(function(){
+				$('#smxsnavi ul').slideUp();
+				$('#blackscreen').fadeOut();
+			})
+		})
+		
+		
+		
+		$(document).ready(function(){
+			$('#searchinfo').hide();
+			$('#searchlabel').click(function(){
+				let hidebox = document.getElementById('searchinfo');
+				$('#searchinfo').fadeToggle();
+				hidebox.value = '';
+			})
+			$('#searchinfo').keypress(function(event){
+				let hidebox = document.getElementById('searchinfo');
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if( keycode == '13') {
+					$('#searchinfo').fadeOut();
+					hidebox.value = '';
+				}
+				
+				
+			})
+		}) 
+		
+			$(document).ready(function(){
+			$('#searchinfo1').hide();
+			$('#searchlabel1').click(function(){
+				let hidebox = document.getElementById('searchinfo1');
+				$('#searchinfo1').fadeToggle();
+				hidebox.value = '';
+			})
+			$('#searchinfo1').keypress(function(event){
+				let hidebox = document.getElementById('searchinfo1');
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if( keycode == '13') {
+					$('#searchinfo1').fadeOut();
+					hidebox.value = '';
+				}
+			})
+			$('#searchinfo1').click(function(){
+				$('#smxsnavi ul').slideUp();
+				$('#blackscreen').fadeOut();
+			})
+			$('#icon3line').click(function(){
+				$('#searchinfo1').fadeOut();
+			})
+		})
+			$(document).ready(function(){
+			$('#searchinfo2').hide();
+			$('#searchlabel2').click(function(){
+				let hidebox = document.getElementById('searchinfo2');
+				$('#searchinfo2').fadeToggle();
+				hidebox.value = '';
+			})
+			$('#searchinfo2').keypress(function(event){
+				let hidebox = document.getElementById('searchinfo2');
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if( keycode == '13') {
+					$('#searchinfo2').fadeOut();
+					hidebox.value = '';
+				}
+			})
+			$('#searchinfo2').click(function(){
+				$('#smxsnavi ul').slideUp();
+				$('#blackscreen').fadeOut();
+			})
+			$('#icon3line').click(function(){
+				$('#searchinfo2').fadeOut();
+			})
+		})
+	</script>
+  </head>
+  <body>
+	<div id="bgimgtop"></div><!--bgimgtop-->
+	<div id="bgimg">
+		<div id="blackscreen"></div><!--hoi blackscreen-->
+		<!--Navi-->
+		<div class="container-fluid" id="navibg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3
+								col-md-3
+								col-sm-4
+								col-xs-5" id="logo">
+						<a href="index.html"><img src="part/logo.png" alt="logo"></a>
+					</div><!--Logo-->
+					<div class="col-lg-8 col-lg-offset-1
+								col-md-9 col-md-offset-0
+								hidden-sm
+								hidden-xs" id="navi">
+						<ul>
+							<li><label for="searchinfo"><i class="fas fa-search" id="searchlabel"></i></label></li>
+							<li><input type="text" id="searchinfo"></li>
+							<li><a href=""><b>Liên Hệ</b></a></li>
+							<li><a href=""><b>Tuyển Dụng</b></a></li>
+							<li><a href=""><b>Tin Tức</b></a></li>
+							<li><a href="product.html"><b>Menu</b></a></li>
+							<li><a href=""><b>Cửa Hàng</b></a></li>
+						</ul>
+					</div><!--navi-->
+				<!--Search,3line SM XS -->
+					<div class ="col-sm-8
+								 col-xs-7
+								 hidden-lg hidden-md" id="navismxs">
+						<ul>
+							<li><a><i class="fas fa-bars" id="icon3line"></i></a></li>
+							<li><label for="searchinfo1"><i class="fas fa-search hidden-xs" id="searchlabel1" style="padding-left: 5px"></i></label></li>
+							<li><label for="searchinfo2"><i class="fas fa-search hidden-sm" id="searchlabel2" style="padding-left: 5px"></i></label></li>
+							<li><input type="text" id="searchinfo1" class="hidden-xs"></li>
+						</ul>
+					</div>
+				</div>
+					<div class="row hidden-sm hidden-lg hidden-md">
+						<div class="col-xs-12" id="searchinfo2div">
+							<input type="text" id="searchinfo2">
+						</div>
+					</div>
+					
+			</div>
+		</div><!--Navi-->
+		<!--SM XS Navi-->
+		
+		<div class="container-fluid hidden-lg hidden-md">
+			<div class="row">
+				<div class="col-sm-12 visible-sm
+							col-xs-12 visible-xs" id="smxsnavi">
+					<ul>
+						<li><a href="" style="border-top:none;">Cửa Hàng</a></li>
+						<li><a href="product.html">Menu</a></li>
+						<li><a href="">Tin Tức</a></li>
+						<li><a href="">Tuyển Dụng</a></li>
+						<li><a href="">Liên Hệ</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--Banner@-->
+		<div id="carousel1" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel1" data-slide-to="1"></li>
+		    <li data-target="#carousel1" data-slide-to="2"></li>
+		    <li data-target="#carousel1" data-slide-to="3"></li>
+		    <li data-target="#carousel1" data-slide-to="4"></li>
+	      </ol>
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active"><img src="stock/espresso-ground-coffee-beans-1296x728.jpg" alt="First slide image" class="center-block hidden-xs">
+									 <img src="stock/bannermobiletest.jpg" alt="First slide image" class="center-block visible-xs">
+			<div class="container" style="margin-left: 0px">
+		      <div class="carousel-caption">
+				  <div class="visible-sm visible-xs">
+					  	<div  class="bannertitle">
+				  			<a href="">Cảm hứng từ cà phê</a>
+				  		</div>
+				  		<div  class="bannercontent" style="padding-right=0px">
+							<a href="">"Cà phê đắng như cuộc đời sâu lắng<br>
+							Nếm bao nhiêu cũng chẳng thấy đủ đầy"<br>
+							<span>Phạm Thị Bích Hoa</span></a>
+						</div>
+				  </div>
+				<div class="row hidden-xs hidden-sm">
+					<div class="col-lg-7 hidden-xs bannertitle">
+						<a href="">Cảm hứng từ cà phê</a>
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-lg-7 bannercontent">
+						<a href="">"Cà phê đắng như cuộc đời sâu lắng<br>
+						Nếm bao nhiêu cũng chẳng thấy đủ đầy"<br>
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phạm Thị Bích Hoa</span></a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<a href=""><button type="button" class="btn" style="margin-left:0px; margin-top: 10px;">Xem Thêm</button></a>
+				</div>
+				</div>
+	        </div>
+		    <div class="item"><img src="part/bannerhome/banner2.jpg" alt="Second slide image" class="center-block hidden-xs">
+							  <img src="part/bannerhome/banner2mobile.jpg" alt="First slide image" class="center-block visible-xs">
+		      <div class="carousel-caption">
+				<div class="visible-sm visible-xs">
+					<div class="bannertitle">
+						<a href=""><span style="font-size: 28px ">Chocolate - Sô Cô La</span></a>
+					</div>
+					<div class="clearfix"></div>
+		        	<p style="font-size: 20px" class="visible-lg">Sô-cô-la hay súc-cù-là là một từ được dùng để diễn tả một loại <br> thức ăn được làm từ quả của cây ca cao. <br>Sô-cô-la là nguyên liệu cơ bản trong rất nhiều những loại kẹo, <br>kẹo sô-cô-la, kem, bánh quy, bánh ngọt, ... </p>
+					<p style="font-size: 15px" class="visible-md">Sô-cô-la hay súc-cù-là là một từ được dùng để diễn tả một loại <br> thức ăn được làm từ quả của cây ca cao. <br>Sô-cô-la là nguyên liệu cơ bản trong rất nhiều những loại kẹo, <br>kẹo sô-cô-la, kem, bánh quy, bánh ngọt, ... </p>
+					<div class="visible-sm boxsocola"><p style="font-size: 15px;" >Sô-cô-la hay súc-cù-là là một từ được dùng để diễn tả<br> một loại  thức ăn được làm từ quả của cây ca cao.<br> Sô-cô-la là nguyên liệu cơ bản trong rất nhiều những loại kẹo, <br>kẹo sô-cô-la, kem, bánh quy, bánh ngọt, ... </p></div>
+					<div class="visible-xs boxsocola"><p style="font-size: 15px;" >Sô-cô-la hay súc-cù-là là một từ<br> được dùng để diễn tả một loại  thức ăn <br>được làm từ quả của cây ca cao.<br> Sô-cô-la là nguyên liệu cơ bản trong rất nhiều<br> những loại kẹo, kẹo sô-cô-la, kem, bánh quy, bánh ngọt, ... </p></div>
+					<a href="product.html"><button type="button" class="btn" style="margin-left:0px">Mua Ngay</button></a>
+				</div>
+				<div class="hidden-xs hidden-sm">
+					<div class="col-lg-7 bannertitle">
+						<a href="">Chocolate - Sô Cô La</a>
+					</div>
+					<div class="clearfix"></div>
+		        	<p style="font-size: 20px" class="visible-lg">Sô-cô-la hay súc-cù-là là một từ được dùng để diễn tả một loại <br> thức ăn được làm từ quả của cây ca cao. <br>Sô-cô-la là nguyên liệu cơ bản trong rất nhiều những loại kẹo, <br>kẹo sô-cô-la, kem, bánh quy, bánh ngọt, ... </p>
+					<p style="font-size: 15px" class="visible-md">Sô-cô-la hay súc-cù-là là một từ được dùng để diễn tả một loại <br> thức ăn được làm từ quả của cây ca cao. <br>Sô-cô-la là nguyên liệu cơ bản trong rất nhiều những loại kẹo, <br>kẹo sô-cô-la, kem, bánh quy, bánh ngọt, ... </p>
+					<a href="product.html"><button type="button" class="btn" style="margin-left:0px">Mua Ngay</button></a>
+				</div>
+	          </div>
+	        </div>
+		    <div class="item"><img src="part/bannerhome/banner3.jpg" alt="Third slide image" class="center-block hidden-xs">
+								<img src="part/bannerhome/banner3mobile.jpg" alt="First slide image" class="center-block visible-xs">
+		      <div class="carousel-caption" style="top:2%; left: 20%;">
+				<div class="col-lg-3 col-lg-offset-0 
+							col-md-4 col-md-offset-0
+							col-sm-4 col-sm-offset-0
+							col-xs-8" style="top:5%">
+		        	<a href="product.html"><img src="part/bannerhome/Coffee-is-always-a-good-idea-quote.png" alt="quote" class="img-responsive" id="coffeegood"></a>
+				</div>
+	          </div>
+	        </div>
+	        <div class="item"><a href="product.html"><img src="part/bannerhome/banner4.jpg" alt="Third slide image" class="center-block hidden-xs">
+								<img src="part/bannerhome/banner4mobile.jpg" alt="First slide image" class="center-block visible-xs">
+		      <div class="carousel-caption">
+	          </div></a>
+	        </div>
+	        <div class="item"><img src="part/bannerhome/banner5.jpg" alt="Third slide image" class="center-block hidden-xs">
+								<img src="part/bannerhome/banner5mobile.jpg" alt="First slide image" class="center-block visible-xs">
+		      <div class="carousel-caption">
+				<div id="boxsocola" class="visible-sm visible-xs"> <h1><a href="product.html" class="latte">LATTE</a></h1></div>
+		        <h1 class="visible-lg visible-md"><a href="product.html" class="latte">LATTE</a></h1>
+		        <p style="font-size: 20px;" class="visible-lg">Khi chuẩn bị Latte, cà phê Espresso và sữa nóng được trộn lẫn vào nhau,<br> bên trên vẫn là lớp foam nhưng mỏng và nhẹ hơn Cappucinno.</p>
+				<p style="font-size: 15px;" class="visible-md">Khi chuẩn bị Latte, cà phê Espresso và sữa nóng<br> được trộn lẫn vào nhau, bên trên vẫn là lớp foam <br>nhưng mỏng và nhẹ hơn Cappucinno.</p>
+				<p style="font-size: 15px;" class="visible-sm">Khi chuẩn bị Latte, cà phê Espresso và sữa nóng<br> được trộn lẫn vào nhau, bên trên vẫn là lớp foam <br>nhưng mỏng và nhẹ hơn Cappucinno.</p>
+				<p style="font-size: 14px;" class="visible-xs">Khi chuẩn bị Latte, cà phê Espresso và sữa nóng<br> được trộn lẫn vào nhau, bên trên vẫn là lớp foam <br>nhưng mỏng và nhẹ hơn Cappucinno.</p>
+				<a href="product.html"><button type="button" class="btn" style="margin-left:0px">Mua Ngay</button></a>
+	          </div>
+	        </div>
+	      </div>
+		  <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="right carousel-control" href="#carousel1" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>
+		<!--Banner@-->
+		<!--Content1-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4
+							col-md-4 col-md-offset-4
+							col-sm-4 col-sm-offset-4
+							col-xs-6 col-xs-offset-3 pagename">
+							<img src="part/menunametag.png" alt="menutag" class="img-responsive">			
+				</div>
+			</div><!--PageName-->
+			<div class="row">
+				<div class="col-lg-3 col-lg-offset-0
+							col-md-3 col-md-offset-0
+							col-sm-5 col-sm-offset-1
+							col-xs-6 col-xs-offset-0 productbox">
+				<a href="product.html"><img src="part/coffeeproductimg.png" alt="menutag" class="img-responsive"></a>
+				</div>
+				<div class="col-lg-3
+							col-md-3
+							col-sm-5
+							col-xs-6 productbox">
+				<a href="product.html"><img src="part/lattecoffeeproductimg.png" alt="menutag" class="img-responsive"></a>
+				</div>
+				<div class="clearfix visible-sm"></div>
+				<div class="col-lg-3 col-lg-offset-0
+							col-md-3 col-md-offset-0
+							col-sm-5 col-sm-offset-1
+							col-xs-6 col-xs-offset-0 productbox">
+				<a href="product.html"><img src="part/mocktailproductimg.png" alt="menutag" class="img-responsive"></a>
+				</div>
+				<div class="col-lg-3
+							col-md-3
+							col-sm-5
+							col-xs-6 productbox">
+				<a href="product.html"><img src="part/desertproductimg.png" alt="menutag" class="img-responsive"></a>
+				</div>
+				<div class="clearfix visible-sm"></div>
+			</div>
+			<div class="row" style="text-align: right;">
+				<div class="col-lg-2 col-lg-offset-10
+							col-md-3 col-md-offset-9
+							col-sm-4 col-sm-offset-7
+							col-xs-6 col-xs-offset-6">
+				<a href="product.html"><button type="button" class="btn xemtatca">Xem Tất Cả</button></a>
+				</div>
+			</div>
+			
+		</div>
+		<!--Content2-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4
+							col-md-4 col-md-offset-4
+							col-sm-4 col-sm-offset-4
+							col-xs-6 col-xs-offset-3 pagename">
+							<img src="part/tintucnametag.png" alt="tintuctag" class="img-responsive">			
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6
+							col-md-6
+							col-sm-12
+							col-xs-12 tintucbox">
+					<div class="row">
+						<div class="col-lg-6 col-lg-offset-0
+									col-md-6 col-md-offset-0
+									col-sm-5 col-sm-offset-1
+									col-xs-4 col-xs-offset-0 tintucimg">
+							<a href=""><img src="part/tintucimg.jpg" alt="tintucimg" class="img-responsive"></a>
+						</div>
+						<div class="col-lg-6 col-lg-offset-6
+									col-md-6 col-md-offset-6
+									col-sm-5 col-sm-offset-6
+									col-xs-8 col-xs-offset-4 contenttintuc">
+							<span><p><a href="">Hành trình thương hiệu tỷ USD: Vạn dặm từ một bước đi</a></p>
+							<h5>Ra đời trong hoàn cảnh hỗn loạn, Starbucks bảo thủ đến cùng
+							với chất lượng cà phê và vươn lên trở thành chuỗi cafe với 28.000.
+							</h5></span>
+						</div><div class="clearfix visible-sm"></div>
+					</div>
+					<img src="part/tintucbox.jpg" alt="tintuc1" class="hidden-xs hidden-sm img-responsive">
+					<div class="row visible-sm">
+						<div class="col-sm-10 col-sm-offset-1">
+							<img src="part/tintucbox.jpg" alt="tintuc1" class="img-responsive">
+						</div>
+					</div>
+					<div class="row visible-xs">
+						<div class="col-sm-12">
+							<img src="part/tintucboxmobile.png" alt="tintuc1" class="img-responsive">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6
+							col-md-6
+							col-sm-12
+							col-xs-12 tintucbox">
+					<div class="row">
+						<div class="col-lg-6 col-lg-offset-0
+									col-md-6 col-md-offset-0
+									col-sm-5 col-sm-offset-1
+									col-xs-4 col-xs-offset-0 tintucimg">
+							<a href=""><img src="part/tintucimg.jpg" alt="tintucimg" class="img-responsive"></a>
+						</div>
+						<div class="col-lg-6 col-lg-offset-6
+									col-md-6 col-md-offset-6
+									col-sm-5 col-sm-offset-6
+									col-xs-8 col-xs-offset-4 contenttintuc">
+							<span><p><a href="">Hành trình thương hiệu tỷ USD: Vạn dặm từ một bước đi</a></p>
+							<h5>Ra đời trong hoàn cảnh hỗn loạn, Starbucks bảo thủ đến cùng
+							với chất lượng cà phê và vươn lên trở thành chuỗi cafe với 28.000
+							</h5></span>
+						</div><div class="clearfix visible-sm"></div>
+					</div>
+					<img src="part/tintucbox.jpg" alt="tintuc1" class="hidden-xs hidden-sm img-responsive">
+					<div class="row visible-sm">
+						<div class="col-sm-10 col-sm-offset-1">
+							<img src="part/tintucbox.jpg" alt="tintuc1" class="img-responsive">
+						</div>
+					</div>
+					<div class="row visible-xs">
+						<div class="col-sm-12">
+							<img src="part/tintucboxmobile.png" alt="tintuc1" class="img-responsive">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6
+							col-md-6
+							col-sm-12
+							col-xs-12 tintucbox">
+					<div class="row">
+						<div class="col-lg-6 col-lg-offset-0
+									col-md-6 col-md-offset-0
+									col-sm-5 col-sm-offset-1
+									col-xs-4 col-xs-offset-0 tintucimg">
+							<a href=""><img src="part/tintucimg.jpg" alt="tintucimg" class="img-responsive"></a>
+						</div>
+						<div class="col-lg-6 col-lg-offset-6
+									col-md-6 col-md-offset-6
+									col-sm-5 col-sm-offset-6
+									col-xs-8 col-xs-offset-4 contenttintuc">
+							<span><p><a href="">Hành trình thương hiệu tỷ USD: Vạn dặm từ một bước đi</a></p>
+							<h5>Ra đời trong hoàn cảnh hỗn loạn, Starbucks bảo thủ đến cùng
+							với chất lượng cà phê và vươn lên trở thành chuỗi cafe với 28.000
+							</h5></span>
+						</div><div class="clearfix visible-sm"></div>
+					</div>
+					<img src="part/tintucbox.jpg" alt="tintuc1" class="hidden-xs hidden-sm img-responsive">
+					<div class="row visible-sm">
+						<div class="col-sm-10 col-sm-offset-1">
+							<img src="part/tintucbox.jpg" alt="tintuc1" class="img-responsive">
+						</div>
+					</div>
+					<div class="row visible-xs">
+						<div class="col-sm-12">
+							<img src="part/tintucboxmobile.png" alt="tintuc1" class="img-responsive">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6
+							col-md-6
+							col-sm-12
+							col-xs-12 tintucbox">
+					<div class="row">
+						<div class="col-lg-6 col-lg-offset-0
+									col-md-6 col-md-offset-0
+									col-sm-5 col-sm-offset-1
+									col-xs-4 col-xs-offset-0 tintucimg">
+							<a href=""><img src="part/tintucimg.jpg" alt="tintucimg" class="img-responsive"></a>
+						</div>
+						<div class="col-lg-6 col-lg-offset-6
+									col-md-6 col-md-offset-6
+									col-sm-5 col-sm-offset-6
+									col-xs-8 col-xs-offset-4 contenttintuc">
+							<span><p><a href="">Hành trình thương hiệu tỷ USD: Vạn dặm từ một bước đi</a></p>
+							<h5>Ra đời trong hoàn cảnh hỗn loạn, Starbucks bảo thủ đến cùng
+							với chất lượng cà phê và vươn lên trở thành chuỗi cafe với 28.000
+							
+							</h5></span>
+						</div><div class="clearfix visible-sm"></div>
+					</div>
+					<img src="part/tintucbox.jpg" alt="tintuc1" class="hidden-xs hidden-sm img-responsive">
+					<div class="row visible-sm">
+						<div class="col-sm-10 col-sm-offset-1">
+							<img src="part/tintucbox.jpg" alt="tintuc1" class="img-responsive">
+						</div>
+					</div>
+					<div class="row visible-xs">
+						<div class="col-sm-12">
+							<img src="part/tintucboxmobile.png" alt="tintuc1" class="img-responsive">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="text-align: right;">
+				<div class="col-lg-2 col-lg-offset-10
+							col-md-3 col-md-offset-9
+							col-sm-4 col-sm-offset-7
+							col-xs-6 col-xs-offset-6">
+				<a href=""><button type="button" class="btn xemtatca">Xem Tất Cả</button></a>
+				</div>
+			</div>
+		</div>
+		<!--Footer-->
+		<div class="container-fluid" id="footerbg">
+			<div class="container" style="margin-top: 50px">
+				<div class="row">
+					<div class="col-lg-4 col-lg-offet-0
+								col-md-4 col-md-offset-0
+								col-sm-5 col-sm-offset-1
+								col-xs-6 col-xs-offset-0">
+						<a href="index.html"><img src="part/logofooter.png" alt="logo" class="img-responsive" id="logofooter"></a>
+					</div>
+					<div class="col-lg-4 col-lg-offset-1
+								col-md-5 col-md-offset-0
+								hidden-sm
+								hidden-xs">
+						<div style="padding-top: 105px">
+							<h4><b>Công ty Thương mại Dịch vụ 1976 Coffee</b></h4>
+							<p>Đường dây nóng<br><b>1900 1560 - 0932 000 848</b>
+							<br>
+							<br>
+							Địa chỉ:<br>
+							139 Dạ Nam P.3, Q.8, Tp.HCM
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-2 col-lg-offset-1
+								col-md-3
+								hidden-sm
+								hidden-xs">
+						<div class="row">
+							<div class="col=lg-12 logolist">
+								<ul>
+									<li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col=lg-12 tagfooter">
+								<ul>
+									<li><a href="">Về chúng tôi</a></li>
+									<li><a href="product.html">Menu</a></li>
+									<li><a href="">Tin tức</a></li>
+									<li><a href="">Tuyển dụng</a></li>
+									<li><a href="">Liên hệ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-sm-offset-2
+								col-xs-6 col-xs-offset-0 visible-sm visible-xs">
+								<div class="logolist">
+								<ul>
+									<li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+								</ul>
+							</div></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-7
+								col-xs-9 visible-sm infosmfooter">
+					<h4><b>Công ty Thương mại Dịch vụ 1976 Coffee</b></h4>
+							<p>Đường dây nóng<br><b>1900 1560 - 0932 000 848</b>
+							<br>
+							<br>
+							Địa chỉ:<br>
+							139 Dạ Nam P.3, Q.8, Tp.HCM
+							</p>				
+					</div>
+					<div class="col-sm-7
+								col-xs-7 visible-xs infosmfooter">
+					<h4><b>Công ty Thương mại Dịch vụ 1976 Coffee</b></h4>
+							<p>Đường dây nóng<br><b>1900 1560 - 0932 000 848</b>
+							<br>
+							<br>
+							Địa chỉ:<br>
+							139 Dạ Nam P.3, Q.8, Tp.HCM
+							</p>				
+					</div>
+					<div class="col-sm-4 col-sm-offset-1
+								col-xs-3 col-xs-offset-0 visible-sm">
+						<div class="col=lg-12 tagfooter">
+								<ul>
+									<li><a href="">Về chúng tôi</a></li>
+									<li><a href="product.html">Menu</a></li>
+									<li><a href="">Tin tức</a></li>
+									<li><a href="">Tuyển dụng</a></li>
+									<li><a href="">Liên hệ</a></li>
+								</ul>
+							</div>				
+					</div>
+					<div class="col-xs-5 visible-xs">
+						<div class="col=lg-12" id="tagfootermobi">
+								<ul>
+									<li><a href="">Về chúng tôi</a></li>
+									<li><a href="product.html">Menu</a></li>
+									<li><a href="">Tin tức</a></li>
+									<li><a href="">Tuyển dụng</a></li>
+									<li><a href="">Liên hệ</a></li>
+								</ul>
+							</div>				
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12
+								col-md-12
+								col-sm-12
+								col-xs-12" id="coppyright">2019 Coppyright &#9400; Coffee 1976. Design by NTT.com</div>
+				</div>
+			</div>
+		</div>
+	</div><!--bgimg-->
+  </body>
+</html>
+
+
+
+
+<!--Chỉnh zindex cho tintuc vs blackscreen-->
+<!--325-425 clean-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProductPage</title>
+	  <!--CSS-->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/fontawesome/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/productpage.css">
+	<!--JavaScript--> 
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<!--js navi-->
+	<script>
+		$(document).ready(function(){
+			$('#blackscreen').hide();
+			$('#smxsnavi ul').hide();
+			$('#icon3line').click(function(){
+				$('#smxsnavi ul').slideToggle();
+				$('#blackscreen').fadeToggle();
+			})
+			$('#blackscreen').click(function(){
+				$('#smxsnavi ul').slideUp();
+				$('#blackscreen').fadeOut();
+			})
+		})
+		
+		
+		
+		$(document).ready(function(){
+			$('#searchinfo').hide();
+			$('#searchlabel').click(function(){
+				let hidebox = document.getElementById('searchinfo');
+				$('#searchinfo').fadeToggle();
+				hidebox.value = '';
+			})
+			$('#searchinfo').keypress(function(event){
+				let hidebox = document.getElementById('searchinfo');
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if( keycode == '13') {
+					$('#searchinfo').fadeOut();
+					hidebox.value = '';
+				}
+				
+				
+			})
+		}) 
+		
+			$(document).ready(function(){
+			$('#searchinfo1').hide();
+			$('#searchlabel1').click(function(){
+				let hidebox = document.getElementById('searchinfo1');
+				$('#searchinfo1').fadeToggle();
+				hidebox.value = '';
+			})
+			$('#searchinfo1').keypress(function(event){
+				let hidebox = document.getElementById('searchinfo1');
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if( keycode == '13') {
+					$('#searchinfo1').fadeOut();
+					hidebox.value = '';
+				}
+			})
+			$('#searchinfo1').click(function(){
+				$('#smxsnavi ul').slideUp();
+				$('#blackscreen').fadeOut();
+			})
+			$('#icon3line').click(function(){
+				$('#searchinfo1').fadeOut();
+			})
+		})
+			$(document).ready(function(){
+			$('#searchinfo2').hide();
+			$('#searchlabel2').click(function(){
+				let hidebox = document.getElementById('searchinfo2');
+				$('#searchinfo2').fadeToggle();
+				hidebox.value = '';
+			})
+			$('#searchinfo2').keypress(function(event){
+				let hidebox = document.getElementById('searchinfo2');
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if( keycode == '13') {
+					$('#searchinfo2').fadeOut();
+					hidebox.value = '';
+				}
+			})
+			$('#searchinfo2').click(function(){
+				$('#smxsnavi ul').slideUp();
+				$('#blackscreen').fadeOut();
+			})
+			$('#icon3line').click(function(){
+				$('#searchinfo2').fadeOut();
+			})
+		})
+	</script>
+  </head>
+  <body>
+	<div id="bgimgtop"></div><!--bgimgtop-->
+	<div id="bgimg">
+		<!--NNNNNAAAAAAVVVVVIIIII-->
+		<div id="blackscreen"></div><!--hoi blackscreen-->
+		<!--Navi-->
+		<div class="container-fluid" id="navibg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3
+								col-md-3
+								col-sm-4
+								col-xs-5" id="logo">
+						<a href="index.html"><img src="part/logo.png" alt="logo"></a>
+					</div><!--Logo-->
+					<div class="col-lg-8 col-lg-offset-1
+								col-md-9 col-md-offset-0
+								hidden-sm
+								hidden-xs" id="navi">
+						<ul>
+							<li><label for="searchinfo"><i class="fas fa-search" id="searchlabel"></i></label></li>
+							<li><input type="text" id="searchinfo"></li>
+							<li><a href=""><b>Liên Hệ</b></a></li>
+							<li><a href=""><b>Tuyển Dụng</b></a></li>
+							<li><a href=""><b>Tin Tức</b></a></li>
+							<li><a href="product.html"><b>Menu</b></a></li>
+							<li><a href=""><b>Cửa Hàng</b></a></li>
+						</ul>
+					</div><!--navi-->
+				<!--Search,3line SM XS -->
+					<div class ="col-sm-8
+								 col-xs-7
+								 hidden-lg hidden-md" id="navismxs">
+						<ul>
+							<li><a><i class="fas fa-bars" id="icon3line"></i></a></li>
+							<li><label for="searchinfo1"><i class="fas fa-search hidden-xs" id="searchlabel1" style="padding-left: 5px"></i></label></li>
+							<li><label for="searchinfo2"><i class="fas fa-search hidden-sm" id="searchlabel2" style="padding-left: 5px"></i></label></li>
+							<li><input type="text" id="searchinfo1" class="hidden-xs"></li>
+						</ul>
+					</div>
+				</div>
+					<div class="row hidden-sm hidden-lg hidden-md">
+						<div class="col-xs-12" id="searchinfo2div">
+							<input type="text" id="searchinfo2">
+						</div>
+					</div>
+					
+			</div>
+		</div><!--Navi-->
+		<!--SM XS Navi-->
+		
+		<div class="container-fluid hidden-lg hidden-md">
+			<div class="row">
+				<div class="col-sm-12 visible-sm
+							col-xs-12 visible-xs" id="smxsnavi">
+					<ul>
+						<li><a href="" style="border-top:none;">Cửa Hàng</a></li>
+						<li><a href="product.html">Menu</a></li>
+						<li><a href="">Tin Tức</a></li>
+						<li><a href="">Tuyển Dụng</a></li>
+						<li><a href="">Liên Hệ</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--GIo hang-->
+		<div class="container" id="giohang">
+			<a href=""><img src="part/detailpage/giohang.png" alt="giohang" id="imggiohang"></a>	
+		</div>
+		<!--Banner-->
+		<div class="container-fluid" id="bannerproductpage">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5
+								col-md-5
+								col-sm-5
+								col-xs-12" id="bannertitle">
+						<a href="">Hành trình hạt cà phê</a>
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-lg-5
+								col-md-5
+								col-sm-5
+								col-xs-12" id="bannercontent">
+						<a href="">Có bao giờ bạn tự hỏi, ly cà phê thơm ngát trên tay mình đã trải qua những chặng đường nào?</a>
+					</div>
+				</div>
+			</div>
+		</div><!--Banner-->
+		<!--Content1-->
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 visible-xs" id="filterxs">
+					<div class="row">
+						<div class="col-xs-6">
+							<a href=""><img src="part/productpage/expresso.png" alt="1"><span style="padding-left: 10px;">Expresso</span></a></div>
+						<div class="col-xs-6">
+							<a href=""><img src="part/productpage/coffee latte.png" alt="1"><span style="padding-left: 10px;">Latte</span></a></div>
+						<div class="col-xs-6" style="margin-top: 10px;">
+							<a href=""><img src="part/productpage/mocktail.png" alt="1" style="padding-left: 4px;"><span style="padding-left: 22px;">Mocktail</span></a></div>
+						<div class="col-xs-6" style="margin-top: 16px;">
+							<a href=""><img src="part/productpage/desert.png" alt="1"><span style="padding-left: 13px;">Desert</span></a></div>
+					</div>
+				</div>
+				<div class="col-lg-3
+							col-md-3
+							col-sm-4
+							hidden-xs" id="filter">
+							<img src="part/productpage/hoatiettrenfilter.png" class="img-responsive" alt="1"><br>
+							<ul class="visible-lg">
+								<a href=""><li><img src="part/productpage/expresso.png" alt="1"><span style="padding-left: 18px;">Expresso</span></li></a>
+								<a href=""><li><img src="part/productpage/coffee latte.png" alt="1"><span>Coffee Latte</span></li></a>
+								<a href=""><li><img src="part/productpage/mocktail.png" alt="1" style="padding-left: 4px;"><span style="padding-left: 30px;">Mocktail</span></li></a>
+								<a href=""><li><img src="part/productpage/desert.png" alt="1"><span style="padding-left: 21px;">Desert</span></li></a>
+							</ul>
+							<ul class="visible-md">
+								<a href=""><li><img src="part/productpage/expresso.png" alt="1"><span style="padding-left: 8px;">Expresso</span></li></a>
+								<a href=""><li><img src="part/productpage/coffee latte.png" alt="1"><span>Coffee Latte</span></li></a>
+								<a href=""><li><img src="part/productpage/mocktail.png" alt="1" style="padding-left: 4px;"><span style="padding-left: 18px;">Mocktail</span></li></a>
+								<a href=""><li><img src="part/productpage/desert.png" alt="1"><span style="padding-left: 12px;">Desert</span></li></a>
+							</ul>
+							<ul class="visible-sm">
+								<a href=""><li><img src="part/productpage/expresso.png" alt="1"><span style="padding-left: 8px;">Expresso</span></li></a>
+								<a href=""><li><img src="part/productpage/coffee latte.png" alt="1"><span>Coffee Latte</span></li></a>
+								<a href=""><li><img src="part/productpage/mocktail.png" alt="1" style="padding-left: 4px;"><span style="padding-left: 18px;">Mocktail</span></li></a>
+								<a href=""><li><img src="part/productpage/desert.png" alt="1"><span style="padding-left: 12px;">Desert</span></li></a>
+							</ul>
+							<img src="part/productpage/hoatietduoifilter.png" alt="1" class="img-responsive">
+							
+				</div>
+				<div class="col-lg-9
+							col-md-9
+							col-sm-8
+							col-xs-12">
+					<div class="row">
+						<div class="col-lg-12
+									col-md-12
+									col-sm-12
+									col-xs-12 nametag">&diams; Món nổi bật</div>
+						<div class="clearfix"></div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="detail.html" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/monnoibat1.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href="detail.html"><img src="part/productpage/monnoibat1.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>	
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="detail.html" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/traolong.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href="detail.html"><img src="part/productpage/traolong.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/monnoibat3.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/monnoibat3.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/monnoibat4.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/monnoibat4.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/monnoibat5.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/monnoibat5.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/monnoibat6.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/monnoibat6.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12
+									col-md-12
+									col-sm-12
+									col-xs-12 nametag">&diams; Expresso</div>
+						<div class="clearfix"></div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/expresso1.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/expresso1.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/expresso2.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/expresso2.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/expresso3.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/expresso3.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/expresso4.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/expresso4.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/expresso5.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/expresso5.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12
+									col-md-12
+									col-sm-12
+									col-xs-12 nametag">&diams; Latte</div>
+						<div class="clearfix"></div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/latte1.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/latte1.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/latte2.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/latte2.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/latte3.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/latte3.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12
+									col-md-12
+									col-sm-12
+									col-xs-12 nametag">&diams; Mocktail</div>
+						<div class="clearfix"></div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/mocktail1.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/mocktail1.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/mocktail2.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/mocktail2.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/mocktail3.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/mocktail3.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/mocktail4.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/mocktail4.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12
+									col-md-12
+									col-sm-12
+									col-xs-12 nametag">&diams; Bánh ngọt</div>
+						<div class="clearfix"></div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/banhngot1.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/banhngot1.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/banhngot2.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/banhngot2.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4
+									col-md-4
+									col-sm-6
+									col-xs-6">
+							
+							<div class="productbox">
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs">
+								<div class="themicon"><a href="">+<i class="fas fa-shopping-cart"></i></a></div>		
+							</div>
+							<div class="threebtn hidden-sm hidden-xs">
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="muangaybtn">Chi tiết</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="chitietbtn">Thêm vào giỏ</a></div>
+							<div class="col-lg-12
+										col-md-12
+										col-sm-12
+										col-xs-12"><a href="" class="themvaogiobtn">Mua ngay</a></div>
+							</div>
+							<img src="part/productpage/blackcover.png" alt="black" class="blackcover hidden-xs hidden-sm" style="transform: none;box-shadow: none;">
+							<img src="part/productpage/banhngot3.jpg" alt="tralong" class="img-responsive hidden-xs hidden-sm">
+							<a href=""><img src="part/productpage/banhngot3.jpg" alt="tralong" class="img-responsive visible-xs visible-sm"></a>
+							<div class="col-sm-12
+										col-xs-12 visible-sm visible-xs" style="padding-left: 0px; padding-right: 0px;">
+								<div class="muangaysmxs">
+									<a href="">Mua Ngay</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Footer-->
+		<div class="container-fluid" id="footerbg">
+			<div class="container" style="margin-top: 50px">
+				<div class="row">
+					<div class="col-lg-4 col-lg-offet-0
+								col-md-4 col-md-offset-0
+								col-sm-5 col-sm-offset-1
+								col-xs-6 col-xs-offset-0">
+						<a href="index.html"><img src="part/logofooter.png" alt="logo" class="img-responsive" id="logofooter"></a>
+					</div>
+					<div class="col-lg-4 col-lg-offset-1
+								col-md-5 col-md-offset-0
+								hidden-sm
+								hidden-xs">
+						<div style="padding-top: 105px">
+							<h4><b>Công ty Thương mại Dịch vụ 1976 Coffee</b></h4>
+							<p>Đường dây nóng<br><b>1900 1560 - 0932 000 848</b>
+							<br>
+							<br>
+							Địa chỉ:<br>
+							139 Dạ Nam P.3, Q.8, Tp.HCM
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-2 col-lg-offset-1
+								col-md-3
+								hidden-sm
+								hidden-xs">
+						<div class="row">
+							<div class="col=lg-12 logolist">
+								<ul>
+									<li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col=lg-12 tagfooter">
+								<ul>
+									<li><a href="">Về chúng tôi</a></li>
+									<li><a href="product.html">Menu</a></li>
+									<li><a href="">Tin tức</a></li>
+									<li><a href="">Tuyển dụng</a></li>
+									<li><a href="">Liên hệ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-sm-offset-2
+								col-xs-6 col-xs-offset-0 visible-sm visible-xs">
+								<div class="logolist">
+								<ul>
+									<li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+								</ul>
+							</div></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-7
+								col-xs-9 visible-sm infosmfooter">
+					<h4><b>Công ty Thương mại Dịch vụ 1976 Coffee</b></h4>
+							<p>Đường dây nóng<br><b>1900 1560 - 0932 000 848</b>
+							<br>
+							<br>
+							Địa chỉ:<br>
+							139 Dạ Nam P.3, Q.8, Tp.HCM
+							</p>				
+					</div>
+					<div class="col-sm-7
+								col-xs-7 visible-xs infosmfooter">
+					<h4><b>Công ty Thương mại Dịch vụ 1976 Coffee</b></h4>
+							<p>Đường dây nóng<br><b>1900 1560 - 0932 000 848</b>
+							<br>
+							<br>
+							Địa chỉ:<br>
+							139 Dạ Nam P.3, Q.8, Tp.HCM
+							</p>				
+					</div>
+					<div class="col-sm-4 col-sm-offset-1
+								col-xs-3 col-xs-offset-0 visible-sm">
+						<div class="col=lg-12 tagfooter">
+								<ul>
+									<li><a href="">Về chúng tôi</a></li>
+									<li><a href="product.html">Menu</a></li>
+									<li><a href="">Tin tức</a></li>
+									<li><a href="">Tuyển dụng</a></li>
+									<li><a href="">Liên hệ</a></li>
+								</ul>
+							</div>				
+					</div>
+					<div class="col-xs-5 visible-xs">
+						<div class="col=lg-12" id="tagfootermobi">
+								<ul>
+									<li><a href="">Về chúng tôi</a></li>
+									<li><a href="product.html">Menu</a></li>
+									<li><a href="">Tin tức</a></li>
+									<li><a href="">Tuyển dụng</a></li>
+									<li><a href="">Liên hệ</a></li>
+								</ul>
+							</div>				
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12
+								col-md-12
+								col-sm-12
+								col-xs-12" id="coppyright">2019 Coppyright &#9400; Coffee 1976. Design by NTT.com</div>
+				</div>
+			</div>
+		</div>
+	</div><!--bgimg-->
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detailpage</title>
+	  <!--CSS-->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/owl carousel/owl.carousel.min.css" rel="stylesheet">
+	<link href="css/owl carousel/owl.theme.default.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/detailpage.css">
+	<link href="css/fontawesome/css/all.css" rel="stylesheet">
+	<!--JavaScript--> 
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/owl carousel/owl.carousel.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$('#blackscreen').hide();
+			$('#smxsnavi ul').hide();
+			$('#icon3line').click(function(){
+				$('#smxsnavi ul').slideToggle();
+				$('#blackscreen').fadeToggle();
+			})
+			$('#blackscreen').click(function(){
+				$('#smxsnavi ul').slideUp();
+				$('#blackscreen').fadeOut();
+			})
+		})
+		
+		
+		
+		$(document).ready(function(){
+			$('#searchinfo').hide();
+			$('#searchlabel').click(function(){
+				let hidebox = document.getElementById('searchinfo');
+				$('#searchinfo').fadeToggle();
+				hidebox.value = '';
+			})
+			$('#searchinfo').keypress(function(event){
+				let hidebox = document.getElementById('searchinfo');
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if( keycode == '13') {
+					$('#searchinfo').fadeOut();
+					hidebox.value = '';
+				}
+				
+				
+			})
+		}) 
+		
+			$(document).ready(function(){
+			$('#searchinfo1').hide();
+			$('#searchlabel1').click(function(){
+				let hidebox = document.getElementById('searchinfo1');
+				$('#searchinfo1').fadeToggle();
+				hidebox.value = '';
+			})
+			$('#searchinfo1').keypress(function(event){
+				let hidebox = document.getElementById('searchinfo1');
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if( keycode == '13') {
+					$('#searchinfo1').fadeOut();
+					hidebox.value = '';
+				}
+			})
+			$('#searchinfo1').click(function(){
+				$('#smxsnavi ul').slideUp();
+				$('#blackscreen').fadeOut();
+			})
+			$('#icon3line').click(function(){
+				$('#searchinfo1').fadeOut();
+			})
+		})
+			$(document).ready(function(){
+			$('#searchinfo2').hide();
+			$('#searchlabel2').click(function(){
+				let hidebox = document.getElementById('searchinfo2');
+				$('#searchinfo2').fadeToggle();
+				hidebox.value = '';
+			})
+			$('#searchinfo2').keypress(function(event){
+				let hidebox = document.getElementById('searchinfo2');
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if( keycode == '13') {
+					$('#searchinfo2').fadeOut();
+					hidebox.value = '';
+				}
+			})
+			$('#searchinfo2').click(function(){
+				$('#smxsnavi ul').slideUp();
+				$('#blackscreen').fadeOut();
+			})
+			$('#icon3line').click(function(){
+				$('#searchinfo2').fadeOut();
+			})
+		})
+	</script>
+	  <!--owlcarousel-->
+	  <script>
+		   $(document).ready(function(){
+			   $('#carousel2').owlCarousel({
+				   dots: false,
+				   loop: true,
+				   autoplay: true,
+				   autoplayTimeout: 3000,
+				   autoplayHoverPause: true,
+				   smartSpeed: 1000,
+				   responsiveClass: true,
+				   responsive:{
+					   0:{
+						   items: 2,
+					   },
+					   768:{
+						   items:4,
+					   }
+				   }
+			   });
+			   $('.owl-carousel').owlCarousel({
+				   dots: false,
+				   loop: true,
+				   autoplay: true,
+				   autoplayTimeout: 3000,
+				   autoplayHoverPause: true,
+				   smartSpeed: 1000,
+				   responsiveClass: true,
+				   responsive:{
+					   0:{
+						   items: 3,
+						   center: true,
+					   },
+					   768:{
+						   items:3,
+					   },
+					   992:{
+						   items:4,
+					   }
+				   }
+			   });
+			    
+		   });
+	  </script>
+	  <script>
+	  	$(document).ready(function(){
+			$('#smallbox img').click(function(){
+				let linkimg = $(this).attr("src");
+				$('#largebox img').attr("src",linkimg);
+			})
+		})
+	  </script>
+  </head>
+  <body>
+	<div id="bgimgtop"></div><!--bgimgtop-->
+	<div id="bgimg">
+		
+		
+		<!--NNNNNAAAAAAVVVVVIIIII-->
+		<div id="blackscreen"></div><!--hoi blackscreen-->
+		<!--Navi-->
+		<div class="container-fluid" id="navibg">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3
+								col-md-3
+								col-sm-4
+								col-xs-5" id="logo">
+						<a href="index.html"><img src="part/logo.png" alt="logo"></a>
+					</div><!--Logo-->
+					<div class="col-lg-8 col-lg-offset-1
+								col-md-9 col-md-offset-0
+								hidden-sm
+								hidden-xs" id="navi">
+						<ul>
+							<li><label for="searchinfo"><i class="fas fa-search" id="searchlabel"></i></label></li>
+							<li><input type="text" id="searchinfo"></li>
+							<li><a href=""><b>Liên Hệ</b></a></li>
+							<li><a href=""><b>Tuyển Dụng</b></a></li>
+							<li><a href=""><b>Tin Tức</b></a></li>
+							<li><a href="product.html"><b>Menu</b></a></li>
+							<li><a href=""><b>Cửa Hàng</b></a></li>
+						</ul>
+					</div><!--navi-->
+				<!--Search,3line SM XS -->
+					<div class ="col-sm-8
+								 col-xs-7
+								 hidden-lg hidden-md" id="navismxs">
+						<ul>
+							<li><a><i class="fas fa-bars" id="icon3line"></i></a></li>
+							<li><label for="searchinfo1"><i class="fas fa-search hidden-xs" id="searchlabel1" style="padding-left: 5px"></i></label></li>
+							<li><label for="searchinfo2"><i class="fas fa-search hidden-sm" id="searchlabel2" style="padding-left: 5px"></i></label></li>
+							<li><input type="text" id="searchinfo1" class="hidden-xs"></li>
+						</ul>
+					</div>
+				</div>
+					<div class="row hidden-sm hidden-lg hidden-md">
+						<div class="col-xs-12" id="searchinfo2div">
+							<input type="text" id="searchinfo2">
+						</div>
+					</div>
+					
+			</div>
+		</div><!--Navi-->
+		<!--SM XS Navi-->
+		
+		<div class="container-fluid hidden-lg hidden-md">
+			<div class="row">
+				<div class="col-sm-12 visible-sm
+							col-xs-12 visible-xs" id="smxsnavi">
+					<ul>
+						<li><a href="" style="border-top:none;">Cửa Hàng</a></li>
+						<li><a href="product.html">Menu</a></li>
+						<li><a href="">Tin Tức</a></li>
+						<li><a href="">Tuyển Dụng</a></li>
+						<li><a href="">Liên Hệ</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--GIo hang-->
+		<div class="container" id="giohang">
+			<a href=""><img src="part/detailpage/giohang.png" alt="giohang" id="imggiohang"></a>	
+		</div>
+		<!--linkmap-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4
+							col-md-5
+							col-sm-5
+							col-xs-9" id="linkmap">
+					<a href="product.html">Menu</a> / <a href="product.html">Coffee Latte</a> / <a href=""><span>Latte</span></a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div><!--linkmap-->
+		<!--Content1-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6
+							col-md-6
+							col-sm-6
+							col-xs-12" id="productboxdetailpage">
+					<div class="row">
+						<div class="col-lg-10 col-lg-offset-1
+									col-md-10 col-md-offset-1
+									col-sm-10 col-sm-offset-1
+									col-xs-12 col-xs-offset-0" id="largebox">
+							<img src="part/detailpage/porductlatte.jpg" class="img-thumbnail" alt="productlatte">
+						</div>
+						<div class="col-lg-10 col-lg-offset-1
+									col-md-10 col-md-offset-1
+									col-sm-10 col-sm-offset-1
+									col-xs-12 col-xs-offset-0" id="smallbox">
+							<div class="row owl-carousel owl-theme">
+								<div class="changeowl">
+									<a><img src="part/detailpage/changimgproduct2.jpg" alt="1" class="img-thumbnail"></a>
+								</div>
+								<div class="changeowl">
+									<a><img src="part/detailpage/changimgproduct3.jpg" alt="1" class="img-thumbnail"></a>
+								</div>
+								<div class="changeowl">
+									<a><img src="part/detailpage/changimgproduct4.jpg" alt="1" class="img-thumbnail"></a>
+								</div>
+								<div class="changeowl">
+									<a><img src="part/detailpage/changimgproduct5.jpg" alt="1" class="img-thumbnail"></a>
+								</div>
+								<div class="changeowl">
+									<a><img src="part/detailpage/changimgproduct6.jpg" alt="1" class="img-thumbnail"></a>
+								</div>
+								<div class="changeowl">
+									<a><img src="part/detailpage/porductlatte.jpg" alt="1" class="img-thumbnail"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-8 col-xs-offset-2 productname visible-xs" style="margin-top:30px;">
+					<img src="part/detailpage/lattetag.png" alt="lattetag" class="img-responsive">
+				</div><div class="clearfix visible-xs"></div>
+				<div class="col-xs-12 productdecription visible-xs">
+					<h4>Latte là một sự kết hợp tinh tế.</h4>
+							<p>Khi chuẩn bị Latte, cà phê Espresso và sữa nóng được trộn lẫn vào nhau, bên trên vẫn là lớp foam nhưng mỏng và nhẹ hơn Cappucinno.
+Bản thân 1 tách Latte ngon sẽ được làm từ lớp nền Espresso hảo hạng cùng lớp crema xốp nhẹ, kết hợp với liều lượng sữa nóng được căn chuẩn.
+Một tách Latte như vậy thôi cũng đã gửi gắm được đầy đủ trải nghiệm về hương vị và mùi vị rồi, nên rất nhiều Barista trên thế giới vẫn đang tranh cãi liệu sự xuất hiện của Latte art có cần thiết hay không?
+Thực tế Latte art chỉ là một yếu tố "thêm", không ảnh hưởng đến hương vị.
+Tuy nhiên, một lớp Latte art mãn nhãn được chuẩn bị kĩ càng từ bàn tay người Barista tỉ mỉ của 1976 Coffee sẽ khiến cho tách Latte yêu thích của bạn thêm phần trọn vẹn - Đó là sự thoả mãn khi cầm trên tay một tách Latte tinh tế về hương vị, mùi vị, lẫn nhãn quan.</p>
+				</div>
+				<div class="col-xs-4  visible-xs"><div id="giatienmobile">45.000Đ</div></div>
+				<div class="col-xs-4  visible-xs" id="settingxss"><a href=""><button type="button" class="btn xemtatca">Thêm vào giỏ</button></a></div>
+				<div class="col-xs-4  visible-xs"><a href=""><button type="button" class="btn xemtatca">Mua ngay</button></a></div>
+				<div class="col-lg-6
+							col-md-6
+							col-sm-6
+							hidden-xs" id="decription">
+					<div class="row">
+						<div class="col-lg-12 col-lg-offset-0
+									col-md-8 col-md-offset-2
+									col-sm-8 col-sm-offset-2 productname">
+							<img src="part/detailpage/lattetag.png" alt="lattetag" class="img-responsive">
+						</div>
+						<div class="col-lg-12
+									col-md-12
+									col-sm-12 productdecription">
+							<h3>Latte là một sự kết hợp tinh tế.</h3>
+							<p>Khi chuẩn bị Latte, cà phê Espresso và sữa nóng được trộn lẫn vào nhau, bên trên vẫn là lớp foam nhưng mỏng và nhẹ hơn Cappucinno.
+Bản thân 1 tách Latte ngon sẽ được làm từ lớp nền Espresso hảo hạng cùng lớp crema xốp nhẹ, kết hợp với liều lượng sữa nóng được căn chuẩn.
+Một tách Latte như vậy thôi cũng đã gửi gắm được đầy đủ trải nghiệm về hương vị và mùi vị rồi, nên rất nhiều Barista trên thế giới vẫn đang tranh cãi liệu sự xuất hiện của Latte art có cần thiết hay không?
+Thực tế Latte art chỉ là một yếu tố "thêm", không ảnh hưởng đến hương vị.
+Tuy nhiên, một lớp Latte art mãn nhãn được chuẩn bị kĩ càng từ bàn tay người Barista tỉ mỉ của 1976 Coffee sẽ khiến cho tách Latte yêu thích của bạn thêm phần trọn vẹn - Đó là sự thoả mãn khi cầm trên tay một tách Latte tinh tế về hương vị, mùi vị, lẫn nhãn quan.</p>
+						</div>
+						<div class="col-lg-5
+									col-md-5
+									col-sm-5">
+							<div id="giatien">45.000Đ</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-lg-5
+									col-md-5
+									col-sm-5 muathem">
+							<a href=""><button type="button" class="btn xemtatca" id="marginbtn">Mua ngay</button></a>
+						</div>
+						<div class="col-lg-7
+									col-md-7
+									col-sm-7 muathem">
+							<a href=""><button type="button" class="btn xemtatca">Thêm vào giỏ</button></a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Content2-->
+		<div class="container">
+			<div class="row hidden-xs">
+				<div class="col-lg-12
+							col-md-12
+							col-sm-12 pagename" style="margin-top: 100px;">
+					<img src="part/detailpage/luachonkhactag.png" alt="luachonkhac">
+				</div>
+			</div>
+			<div class="row visible-xs">
+				<div class="col-xs-8 col-xs-offset-2 pagename" style="margin-top: 40px;">
+					<img src="part/detailpage/luachonkhactag.png" alt="luachonkhac" class="img-responsive">
+				</div>
+			</div>
+			
+			<div class="row owl-carousel owl-theme" id="carousel2">
+				<div class="changeowl2">
+					<a href="product.html"><img src="part/detailpage/pro1.jpg" alt="1" class="img-responsive"></a>
+				</div>
+				<div class="changeowl2">
+					<a href="product.html"><img src="part/detailpage/pro2.jpg" alt="1" class="img-responsive"></a>
+				</div>
+				<div class="changeowl2">
+					<a href="product.html"><img src="part/detailpage/pro3.jpg" alt="1" class="img-responsive"></a>
+				</div>
+				<div class="changeowl2">
+					<a href="product.html"><img src="part/detailpage/pro4.jpg" alt="1" class="img-responsive"></a>
+				</div>
+				<div class="changeowl2">
+					<a href="product.html"><img src="part/detailpage/pro2.jpg" alt="1" class="img-responsive"></a>
+				</div>
+				<div class="changeowl2">
+					<a href="product.html"><img src="part/detailpage/pro4.jpg" alt="1" class="img-responsive"></a>
+				</div>
+			</div>
+		</div>
+		<!--Footer-->
+		<div class="container-fluid" id="footerbg">
+			<div class="container" style="margin-top: 50px">
+				<div class="row">
+					<div class="col-lg-4 col-lg-offet-0
+								col-md-4 col-md-offset-0
+								col-sm-5 col-sm-offset-1
+								col-xs-6 col-xs-offset-0">
+						<a href="index.html"><img src="part/logofooter.png" alt="logo" class="img-responsive" id="logofooter"></a>
+					</div>
+					<div class="col-lg-4 col-lg-offset-1
+								col-md-5 col-md-offset-0
+								hidden-sm
+								hidden-xs">
+						<div style="padding-top: 105px">
+							<h4><b>Công ty Thương mại Dịch vụ 1976 Coffee</b></h4>
+							<p>Đường dây nóng<br><b>1900 1560 - 0932 000 848</b>
+							<br>
+							<br>
+							Địa chỉ:<br>
+							139 Dạ Nam P.3, Q.8, Tp.HCM
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-2 col-lg-offset-1
+								col-md-3
+								hidden-sm
+								hidden-xs">
+						<div class="row">
+							<div class="col=lg-12 logolist">
+								<ul>
+									<li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+								</ul>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col=lg-12 tagfooter">
+								<ul>
+									<li><a href="">Về chúng tôi</a></li>
+									<li><a href="">Menu</a></li>
+									<li><a href="">Tin tức</a></li>
+									<li><a href="">Tuyển dụng</a></li>
+									<li><a href="">Liên hệ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-sm-offset-2
+								col-xs-6 col-xs-offset-0 visible-sm visible-xs">
+								<div class="logolist">
+								<ul>
+									<li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+									<li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+								</ul>
+							</div></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-7
+								col-xs-9 visible-sm infosmfooter">
+					<h4><b>Công ty Thương mại Dịch vụ 1976 Coffee</b></h4>
+							<p>Đường dây nóng<br><b>1900 1560 - 0932 000 848</b>
+							<br>
+							<br>
+							Địa chỉ:<br>
+							139 Dạ Nam P.3, Q.8, Tp.HCM
+							</p>				
+					</div>
+					<div class="col-sm-7
+								col-xs-7 visible-xs infosmfooter">
+					<h4><b>Công ty Thương mại Dịch vụ 1976 Coffee</b></h4>
+							<p>Đường dây nóng<br><b>1900 1560 - 0932 000 848</b>
+							<br>
+							<br>
+							Địa chỉ:<br>
+							139 Dạ Nam P.3, Q.8, Tp.HCM
+							</p>				
+					</div>
+					<div class="col-sm-4 col-sm-offset-1
+								col-xs-3 col-xs-offset-0 visible-sm">
+						<div class="col=lg-12 tagfooter">
+								<ul>
+									<li><a href="">Về chúng tôi</a></li>
+									<li><a href="product.html">Menu</a></li>
+									<li><a href="">Tin tức</a></li>
+									<li><a href="">Tuyển dụng</a></li>
+									<li><a href="">Liên hệ</a></li>
+								</ul>
+							</div>				
+					</div>
+					<div class="col-xs-5 visible-xs">
+						<div class="col=lg-12" id="tagfootermobi">
+								<ul>
+									<li><a href="">Về chúng tôi</a></li>
+									<li><a href="product.html">Menu</a></li>
+									<li><a href="">Tin tức</a></li>
+									<li><a href="">Tuyển dụng</a></li>
+									<li><a href="">Liên hệ</a></li>
+								</ul>
+							</div>				
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12
+								col-md-12
+								col-sm-12
+								col-xs-12" id="coppyright">2019 Coppyright &#9400; Coffee 1976. Design by NTT.com</div>
+				</div>
+			</div>
+		</div>
+	</div><!--bgimg-->
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
